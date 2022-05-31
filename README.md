@@ -1,5 +1,5 @@
 # Build a Simple Guessing Game
-
+ 
 ## This challenge will help you to:
 - Break down problems into implementable pseudocode
 - Implement a basic Python class and identify when to use instance variables
