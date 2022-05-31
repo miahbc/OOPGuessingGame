@@ -1,6 +1,6 @@
 class GuessingGame():
 
-    def __init__(self, answer, user_guess):
+    def __init__(self, answer=10, user_guess):
         self.answer = answer
         self.user_guess = user_guess
         
@@ -13,9 +13,11 @@ class GuessingGame():
         
     
     def solved(self):
+        self.answer = self.guess()
         if self.guess() == self.answer:
-            print(f"Your last guess {self.user_guess} was {self.guess()}.")
-        else: print(f"Your last guess {self.user_guess} was {self.guess()}.")
+            return f"Your last guess {self.user_guess} was {self.answer}."
+        else:
+            return f"Your last guess {self.user_guess} was {self.answer}."
 
-game = GuessingGame(10)
-print(game.guess(2))
+game = GuessingGame(2)
+print(game(2))
